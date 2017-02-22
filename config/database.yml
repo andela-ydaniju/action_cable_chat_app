@@ -7,11 +7,11 @@ default: &default
 
 development:
   <<: *default
-  database: action_cable_development
+  database: chat_app_development
 
 test:
   <<: *default
-  database: action_cable_test
+  database: chat_app_test
 
 production: &deploy
   url:  <%= ENV.fetch("DATABASE_URL", "") %>
