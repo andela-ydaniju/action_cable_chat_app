@@ -3,6 +3,7 @@
   <ul class="header-nav">
     <% if logged_in? %>
     <li><%= link_to "Sign out", logout_path, method: :delete %>
+    <li><%= current_user.username %>
     <% end %>
   </ul>
 </header>
