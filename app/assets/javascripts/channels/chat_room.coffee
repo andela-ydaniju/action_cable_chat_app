@@ -11,3 +11,7 @@ App.chat_room = App.cable.subscriptions.create "ChatRoomChannel",
       $('#messages-table').append '<div class="message">' +
         '<div class="message-user">' + data.username + ":" + '</div>' +
         '<div class="message-content">' + data.content + '</div>' + '</div>'
+      
+      playTone = $(document).createElement('audio')
+      playTone.setAttribute('src', '/assets/piano.mp4')
+      playTone.setAttribute('autoplay', true)
